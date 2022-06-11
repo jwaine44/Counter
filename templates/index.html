@@ -9,9 +9,10 @@
 </head>
 <body>
     <h1>Counter</h1>
-    <p>{{session['count']}} times</p>
-    <div class="container">
         <form action="/count" method="POST">
+            <p>{{session['count']}} times</p>
+
+        <div class="container">
             <button id="count" type="submit">CLICK</button>
         </form>
             
@@ -22,6 +23,7 @@
         <form action="/count_by_two" method="POST">
             <button id="count_by_two" type="submit">COUNT BY 2</button>
         </form>
-    </div>
+        
+        </div>
 </body>
 </html>
