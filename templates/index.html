@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Counter</h1>
+    <p>{{session['count']}} times</p>
+    <div class="container">
+        <form action="/count" method="POST">
+            <button id="count" type="submit">CLICK</button>
+        </form>
+            
+        <form action="/destroy_session" method="POST">
+            <button id="reset" type="submit">RESET</button>
+        </form>
+
+        <form action="/count_by_two" method="POST">
+            <button id="count_by_two" type="submit">COUNT BY 2</button>
+        </form>
+    </div>
+</body>
+</html>
