@@ -6,7 +6,10 @@ app.secret_key = 'secretkey' # set a secret key for security purposes
 
 @app.route("/")
 def render_home():
-    session['count'] += 1
+    if 'count' in session:
+        session['count'] += 1
+    else:
+        session['count'] = 1
     return render_template("index.html")
 
 @app.route("/count", methods=['POST'])
